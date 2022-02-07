@@ -1,13 +1,121 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+/*
+=============== 
+Fonts
+===============
+*/
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+  /* primary/main color */
+  --clr-primary-soft-blue: hsl(231, 69%, 60%);
+  --clr-primary-soft-red: hsl(0, 94%, 66%);
+  --clr-primary-grayish-blue: hsl(229, 8%, 60%);
+  --clr-primary-dark-grayish-blue: hsl(231, 5%, 29%);
+  --clr-primary-very-dark-blue: hsl(229, 31%, 21%);
+
+  --ff-primary: 'Rubik', sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-blue-shadow: 0 5px 15px rgba(83, 104, 223, 0.2);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1440px;
+  --min-width: 375px;
+  --fs-size-sm: 1.125rem;
 }
+/*
+=============== 
+Global Styles
+===============
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-size-sm);
+  transition: var(--transition);
+  margin: 0 auto;
+  height: 100vh;
+}
+.img {
+  display: block;
+  width: 100%;
+}
+.main {
+  display: grid;
+  place-items: center;
+  margin: 0 auto;
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+}
+.btn {
+  background: var(--clr-primary-soft-blue);
+  padding: 1.2rem 1.2rem;
+  color: white;
+  border-radius: var(--radius);
+  border: transparent;
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
+  font-weight: 600;
+  box-shadow: var(--dark-blue-shadow);
+  cursor: pointer;
+}
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+@media screen and (min-width: 900px) {
+  .section-center {
+    width: 95vw;
+  }
+  .btn {
+    padding: 1.2rem 1.5rem;
+  }
+}
+/*
+=============== 
+Styles
+===============
+*/
