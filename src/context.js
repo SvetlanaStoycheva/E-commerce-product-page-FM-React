@@ -3,7 +3,20 @@ import React, { useState, useContext } from 'react';
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
-  return <AppContext.Provider value={{}}>{children}</AppContext.Provider>;
+  const [isSidebarOpen, setIsSitebarOpen] = useState(false);
+
+  const openSidebar = () => {
+    setIsSitebarOpen(true);
+  };
+  const closeSidebar = () => {
+    setIsSitebarOpen(false);
+  };
+
+  return (
+    <AppContext.Provider value={{ openSidebar, isSidebarOpen, closeSidebar }}>
+      {children}
+    </AppContext.Provider>
+  );
 };
 
 //custom hook
