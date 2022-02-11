@@ -1,3 +1,8 @@
+import img1 from './images/image-product-1.jpg';
+import img2 from './images/image-product-2.jpg';
+import img3 from './images/image-product-3.jpg';
+import img4 from './images/image-product-4.jpg';
+
 export const links = [
   {
     id: 1,
@@ -24,4 +29,11 @@ export const links = [
     text: 'Contact',
     url: '/',
   },
+];
+
+export const productImages = [
+  { image: img1 },
+  { image: img2 },
+  { image: img3 },
+  { image: img4 },
 ];

@@ -4,6 +4,7 @@
 - Build out an e-commerce product page where the users should be able to:
   - use Navbar and toggle Sidebar
   - Open a lightbox gallery by clicking on the large product image
+  - Image Slider Carousel on small screen
   - Switch the large product image by clicking on the small thumbnail images
   - Add items to the cart
   - View the cart and remove items from it
@@ -14,3 +15,7 @@
 <br/>
 
 #### Comments about the code
+
+#### Helpers
+
+- for the slider on the small page: https://www.youtube.com/watch?v=l1MYfu5YWHc

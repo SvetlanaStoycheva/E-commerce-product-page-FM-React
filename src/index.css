@@ -173,16 +173,26 @@ Navbar
     border-top: solid 1px var(--clr-grayish-blue);
     width: 85vw;
     margin: 0 auto;
+    margin-top: -1.8rem;
   }
   .nav-links {
     display: flex;
     justify-content: space-between;
     width: 40vw;
-    cursor: pointer;
     margin-left: 2rem;
-  }
-  .nav-links {
     max-width: 30rem;
+  }
+  .nav-link {
+    cursor: pointer;
+    transition: var(--transition);
+    border-bottom: 2px solid transparent;
+    line-height: 4rem;
+  }
+  .nav-link:hover {
+    border-bottom: 4px solid var(--clr-primary-orange);
+  }
+  .company-logo {
+    padding-top: 1.2rem;
   }
   .nav-toggle {
     display: none;
@@ -197,7 +207,7 @@ Navbar
   position: fixed;
   top: 0;
   left: 0;
-  height: 100vw;
+  height: 100vh;
   width: 100vw;
   background: rgba(0, 0, 0, 0.7);
   transition: var(--transition);
@@ -211,7 +221,7 @@ Navbar
   width: 70vw;
   height: 100vh;
   background: white;
-  padding: 1.5rem;
+  padding: 1.5rem 2.5rem;
 }
 .show-sidebar {
   transform: translate(0);
@@ -232,4 +242,53 @@ Navbar
 .sidebar-link {
   margin-bottom: 1rem;
   letter-spacing: var(--spacing);
+}
+
+/*
+=============== 
+Gallery
+===============
+*/
+
+/* Gallery Slider Small Screen */
+.slider-container {
+  position: relative;
+  width: 100vw;
+  height: 30rem;
+}
+.slider-img {
+  width: 100vw;
+  height: 30rem;
+  object-fit: cover;
+}
+.slider-arrow-right,
+.slider-arrow-left {
+  position: absolute;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: white;
+  font-size: 1.5rem;
+  top: 48%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+}
+.slider-arrow-right {
+  right: 4%;
+}
+.slider-arrow-left {
+  left: 4%;
+}
+
+/* add transition for the the sliders */
+.slider-img-container {
+  opacity: 0;
+  transition-duration: 1s ease;
+}
+.slider-img-container-active {
+  opacity: 1;
+  transition-duration: 1s;
 }

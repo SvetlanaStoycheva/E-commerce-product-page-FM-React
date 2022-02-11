@@ -17,11 +17,15 @@ const Navbar = () => {
           <button className='nav-toggle' onClick={openSidebar}>
             <FaBars />
           </button>
-          <img src={logo} alt='company-logo' />
+          <img src={logo} alt='company-logo' className='company-logo' />
           <ul className='nav-links'>
             {links.map((l) => {
               const { id, text } = l;
-              return <li key={id}>{text}</li>;
+              return (
+                <li className='nav-link' key={id}>
+                  {text}
+                </li>
+              );
             })}
           </ul>
         </div>
