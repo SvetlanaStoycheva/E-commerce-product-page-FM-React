@@ -29,6 +29,7 @@ Variables
   --radius: 0.25rem;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --dark-blue-shadow: 0 5px 15px rgba(83, 104, 223, 0.2);
+  --orange-shadow: 0 15px 15px rgba(255, 125, 26, 0.3);
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   --max-width: 1440px;
   --min-width: 375px;
@@ -291,4 +292,88 @@ Gallery
 .slider-img-container-active {
   opacity: 1;
   transition-duration: 1s;
+}
+
+/*
+=============== 
+Product Info
+===============
+*/
+.product-info-container {
+  padding: 2rem 3rem;
+}
+.product-info-container h3 {
+  color: var(--clr-primary-orange);
+  letter-spacing: var(--spacing);
+}
+.product-info-container p {
+  font-size: 1.2rem;
+  color: var(--clr-dark-grayish-blue);
+  line-height: 1.8rem;
+}
+
+.percentage-container h3 {
+  padding: 0.3rem 0.5rem;
+  background: var(--clr-primary-pale-orange);
+  width: 4.2rem;
+  border-radius: 6px;
+  margin-bottom: 0;
+}
+.current-price {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+.current-price h2 {
+  margin-bottom: 0;
+}
+.price-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.price-container span {
+  color: var(--clr-grayish-blue);
+  font-size: 1.4rem;
+  text-decoration: line-through;
+}
+.quantity-btn {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  border: transparent;
+  background: var(--clr-light-grayish-blue);
+  width: 100%;
+  margin: 2rem auto;
+  padding: 0.8rem;
+  border-radius: 10px;
+}
+.quantity-icon {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--clr-primary-orange);
+  cursor: pointer;
+}
+.quantity-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--clr-black);
+}
+.add-to-cart-btn {
+  border: transparent;
+  background: var(--clr-primary-orange);
+  color: var(--clr-white);
+  width: 100%;
+  padding: 1.2rem;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--orange-shadow);
+}
+.add-to-cart-btn span {
+  margin-left: 1.2rem;
 }
