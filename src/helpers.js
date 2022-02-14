@@ -31,9 +31,4 @@ export const links = [
   },
 ];
 
-export const productImages = [
-  { image: img1 },
-  { image: img2 },
-  { image: img3 },
-  { image: img4 },
-];
+export const productImages = [img1, img2, img3, img4];

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { productImages } from '../helpers';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
+import GalleryBigScreen from './GalleryBigScreen';
 
 function Gallery() {
   const [currentImage, setCurrentImage] = useState(0);
@@ -23,8 +24,8 @@ function Gallery() {
           <IoIosArrowBack />
         </div>
 
-        {productImages.map((i, index) => {
-          const { image } = i;
+        {productImages.map((image, index) => {
+          // const { image } = i;
           return (
             <div
               className={
@@ -44,6 +45,7 @@ function Gallery() {
           <IoIosArrowForward />
         </div>
       </div>
+      <GalleryBigScreen />
     </article>
   );
 }
