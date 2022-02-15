@@ -215,6 +215,7 @@ Navbar
   }
   .nav-container {
     padding: 1.7rem 6rem;
+    max-width: var(--max-width);
   }
   .cart-icon-avatar-container {
     padding-top: 1rem;
@@ -319,6 +320,7 @@ Gallery
   .product-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    max-width: var(--max-width);
   }
   .slider-container {
     display: none;

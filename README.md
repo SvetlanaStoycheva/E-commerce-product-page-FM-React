@@ -7,7 +7,7 @@
   - Image Slider Carousel on small screen
   - Switch the large product image by clicking on the small thumbnail images
   - Add items to the cart
-  - View the cart and remove items from it
+  - View the cart and remove items from it; Update shopping cart on LocalStorage.
 
 <p align-items: center>
     <img src='./readme-images/Screenshot-comments-01.png' width='250'>

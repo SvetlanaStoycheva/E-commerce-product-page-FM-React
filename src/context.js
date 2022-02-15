@@ -1,17 +1,27 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import productImg from './images/image-product-1-thumbnail.jpg';
 
 const AppContext = React.createContext();
 
+//get data from LocalStorage
+const getLocalStorage = () => {
+  let product = localStorage.getItem('product');
+  if (product) {
+    return JSON.parse(localStorage.getItem('product'));
+  } else {
+    return {
+      name: 'Fall Limited Edition Sneakers',
+      price: 125,
+      productAmount: 0,
+      img: productImg,
+      finalePrice: 0,
+    };
+  }
+};
+
 const AppProvider = ({ children }) => {
   const [isSidebarOpen, setIsSitebarOpen] = useState(false);
-  const [product, setProduct] = useState({
-    name: 'Fall Limited Edition Sneakers',
-    price: 125,
-    productAmount: 0,
-    img: productImg,
-    finalePrice: 0,
-  });
+  const [product, setProduct] = useState(getLocalStorage());
 
   const openSidebar = () => {
     setIsSitebarOpen(true);
@@ -32,6 +42,11 @@ const AppProvider = ({ children }) => {
     const newProduct = { ...product, productAmount: 0 };
     setProduct(newProduct);
   };
+
+  //update shopping bag on LocalStorage
+  useEffect(() => {
+    localStorage.setItem('product', JSON.stringify(product));
+  }, [product]);
 
   return (
     <AppContext.Provider
