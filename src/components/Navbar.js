@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from '../images/logo.svg';
 import { FaBars } from 'react-icons/fa';
 import { FaTimes } from 'react-icons/fa';
@@ -6,9 +6,17 @@ import { links } from '../helpers';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 import avatarImg from '../images/image-avatar.png';
 import { useGlobalContext } from '../context';
+import ShoppingCart from './ShoppingCart';
 
 const Navbar = () => {
-  const { openSidebar, isSidebarOpen, closeSidebar } = useGlobalContext();
+  const {
+    openSidebar,
+    isSidebarOpen,
+    closeSidebar,
+    product,
+  } = useGlobalContext();
+  const [isCartOpen, setIsCartOpen] = useState(false);
+
   return (
     <>
       {/* Navbar */}
@@ -30,10 +38,18 @@ const Navbar = () => {
           </ul>
         </div>
         <div className='cart-container'>
-          <button className='cart-btn'>
-            <AiOutlineShoppingCart />
-          </button>
-          <img className='avatar-img' src={avatarImg} alt='avatar' />
+          <div className='cart-icon-avatar-container'>
+            <button
+              className='cart-btn'
+              onClick={() => setIsCartOpen(!isCartOpen)}
+            >
+              <AiOutlineShoppingCart />
+              <span>{product.productAmount}</span>
+            </button>
+
+            <img className='avatar-img' src={avatarImg} alt='avatar' />
+          </div>
+          {isCartOpen && <ShoppingCart />}
         </div>
       </nav>
       <div className='line'></div>

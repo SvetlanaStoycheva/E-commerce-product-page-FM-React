@@ -155,16 +155,32 @@ Navbar
   margin-top: -0.5rem;
 }
 .cart-btn {
+  position: relative;
   background: transparent;
   border: transparent;
   font-size: 1.7rem;
   cursor: pointer;
 }
-.cart-container {
+.cart-icon-avatar-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-content: center;
   column-gap: 2rem;
+}
+
+.cart-btn span {
+  position: absolute;
+  font-size: 0.8rem;
+  width: 1.2rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: var(--clr-primary-orange);
+  top: -0.5rem;
+  right: -0.2rem;
+  color: white;
+}
+.cart-container {
+  position: relative;
 }
 
 @media screen and (min-width: 950px) {
@@ -199,6 +215,9 @@ Navbar
   }
   .nav-container {
     padding: 1.7rem 6rem;
+  }
+  .cart-icon-avatar-container {
+    padding-top: 1rem;
   }
 }
 
@@ -462,5 +481,80 @@ Product Info
   }
   .quantity-number {
     font-size: 1.2rem;
+  }
+}
+/*
+=============== 
+Shopping Cart Container
+===============
+*/
+.shopping-cart-container {
+  position: absolute;
+  top: 5rem;
+  right: -1rem;
+  width: 90vw;
+  height: 22rem;
+  background: var(--clr-white);
+  box-shadow: var(--dark-shadow);
+  border-radius: 10px;
+  z-index: 20;
+  padding: 2rem;
+}
+.shopping-cart-container p {
+  font-weight: 700;
+}
+.cart-line {
+  border-top: solid 2px var(--clr-light-grayish-blue);
+}
+.empty-cart-info {
+  display: grid;
+  justify-content: center;
+}
+.empty-cart-info p {
+  font-weight: 300;
+  margin-top: 7rem;
+}
+/* when the cart is not empty */
+.shopping-cart-product-container {
+  padding: 1.5rem;
+}
+.shopping-cart-img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 6px;
+}
+.shipping-cart-product-info {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  column-gap: 1rem;
+  align-items: center;
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+}
+.shopping-cart-name-price-container p {
+  font-weight: 300;
+  color: var(--clr-dark-grayish-blue);
+  margin-bottom: 0.5rem;
+}
+.shopping-cart-final-price {
+  font-weight: 700;
+  color: var(--clr-black);
+}
+.delete-btn {
+  background: transparent;
+  border: transparent;
+  font-size: 1.5rem;
+  color: var(--clr-grayish-blue);
+  cursor: pointer;
+}
+@media screen and (min-width: 950px) {
+  .shopping-cart-container {
+    width: 25rem;
+    height: 20rem;
+    top: 3.5rem;
+  }
+  /* when the cart is not empty */
+  .shipping-cart-product-info {
+    margin-top: 0rem;
   }
 }
