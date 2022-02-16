@@ -62,7 +62,7 @@ const LightboxGallery = () => {
                     >
                       <img
                         src={image}
-                        alt='small-image-product'
+                        alt='small-product'
                         className='small-image'
                       />
                     </div>

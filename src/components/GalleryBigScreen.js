@@ -26,11 +26,7 @@ function GalleryBigScreen() {
               key={index}
               onClick={() => setMainImg(productImages[index])}
             >
-              <img
-                src={image}
-                alt='small-image-product'
-                className='small-image'
-              />
+              <img src={image} alt='small-product' className='small-image' />
             </div>
           );
         })}
