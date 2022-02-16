@@ -10,7 +10,19 @@
   - View the cart and remove items from it; Update shopping cart on LocalStorage.
 
 <p align-items: center>
-    <img src='./readme-images/Screenshot-comments-01.png' width='250'>
+    <img src='./readme-images/Screenshot-ecommers-product-page-01.png' width='250'>
+</p>
+<br/>
+<p align-items: center>
+    <img src='./readme-images/Screenshot-ecommers-product-page-02.png' width='250'>
+</p>
+<br/>
+<p align-items: center>
+    <img src='./readme-images/Screenshot-ecommers-product-page-03.png' width='250'>
+</p>
+<br/>
+<p align-items: center>
+    <img src='./readme-images/Screenshot-ecommers-product-page-04.png' width='250'>
 </p>
 <br/>
 
