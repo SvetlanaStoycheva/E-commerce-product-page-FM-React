@@ -1,8 +1,8 @@
 ## E-commerce product page // Frontend Mentor Project // React and CSS
 
-- [see project](sweta-e-commers-product-page-fm.netlify.app)
-- Build out an e-commerce product page where the users should be able to:
-  - use Navbar and toggle Sidebar
+- [see project](https://sweta-e-commers-product-page-fm.netlify.app)
+- The project is an e-commerce product page where the users should be able to:
+  - Use Navbar and toggle Sidebar
   - Open a lightbox gallery by clicking on the large product image
   - Image Slider Carousel on small screen
   - Switch the large product image by clicking on the small thumbnail images
