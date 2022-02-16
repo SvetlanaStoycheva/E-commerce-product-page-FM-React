@@ -14,8 +14,9 @@ const Navbar = () => {
     isSidebarOpen,
     closeSidebar,
     product,
+    toggleShoppingCart,
+    isCartOpen,
   } = useGlobalContext();
-  const [isCartOpen, setIsCartOpen] = useState(false);
 
   return (
     <>
@@ -39,10 +40,7 @@ const Navbar = () => {
         </div>
         <div className='cart-container'>
           <div className='cart-icon-avatar-container'>
-            <button
-              className='cart-btn'
-              onClick={() => setIsCartOpen(!isCartOpen)}
-            >
+            <button className='cart-btn' onClick={toggleShoppingCart}>
               <AiOutlineShoppingCart />
               <span>{product.productAmount}</span>
             </button>

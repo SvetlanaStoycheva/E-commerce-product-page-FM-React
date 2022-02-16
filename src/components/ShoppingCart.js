@@ -1,13 +1,23 @@
 import React from 'react';
 import { useGlobalContext } from '../context';
 import { RiDeleteBin5Line } from 'react-icons/ri';
+import { FaTimes } from 'react-icons/fa';
 
 function ShoppingCart() {
-  const { product, handleDeleteProduct } = useGlobalContext();
+  const { product, handleDeleteProduct, setIsCartOpen } = useGlobalContext();
 
   return (
     <section className='shopping-cart-container'>
-      <p>Cart</p>
+      <div className='shopping-cart-header'>
+        <p>Cart</p>
+        <span
+          className='shopping-cart-close-btn'
+          onClick={() => setIsCartOpen(false)}
+        >
+          <FaTimes />
+        </span>
+      </div>
+
       <div className='cart-line'></div>
       {product.productAmount > 0 ? (
         <div className='shopping-cart-product-container'>

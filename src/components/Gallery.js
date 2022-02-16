@@ -25,7 +25,6 @@ function Gallery() {
         </div>
 
         {productImages.map((image, index) => {
-          // const { image } = i;
           return (
             <div
               className={

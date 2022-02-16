@@ -20,8 +20,10 @@ const getLocalStorage = () => {
 };
 
 const AppProvider = ({ children }) => {
-  const [isSidebarOpen, setIsSitebarOpen] = useState(false);
   const [product, setProduct] = useState(getLocalStorage());
+  const [isSidebarOpen, setIsSitebarOpen] = useState(false);
+  const [isCartOpen, setIsCartOpen] = useState(false);
+  const [isLightboxGalleryOpen, setIsLightboxGalleryOpen] = useState(false);
 
   const openSidebar = () => {
     setIsSitebarOpen(true);
@@ -35,6 +37,12 @@ const AppProvider = ({ children }) => {
     const finalePrice = 125 * amount;
     const newProduct = { ...product, productAmount: amount, finalePrice };
     setProduct(newProduct);
+    setIsCartOpen(true);
+  };
+
+  //open/close the shopping cart container
+  const toggleShoppingCart = () => {
+    setIsCartOpen(!isCartOpen);
   };
 
   //when the delete button in the shopping cart is clicked
@@ -48,6 +56,11 @@ const AppProvider = ({ children }) => {
     localStorage.setItem('product', JSON.stringify(product));
   }, [product]);
 
+  //open/close Ligthbox Gallery
+  const openLightboxGallery = () => {
+    setIsLightboxGalleryOpen(true);
+  };
+
   return (
     <AppContext.Provider
       value={{
@@ -56,7 +69,13 @@ const AppProvider = ({ children }) => {
         closeSidebar,
         handleAddToCart,
         product,
+        toggleShoppingCart,
+        isCartOpen,
+        setIsCartOpen,
         handleDeleteProduct,
+        openLightboxGallery,
+        isLightboxGalleryOpen,
+        setIsLightboxGalleryOpen,
       }}
     >
       {children}
