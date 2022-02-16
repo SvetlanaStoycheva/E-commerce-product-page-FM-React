@@ -591,6 +591,7 @@ Shopping Cart Container
 Lightbox Gallery
 ===============
 */
+/* visible only on big screen */
 .lightbox-gallery-container {
   display: none;
 }
@@ -624,5 +625,9 @@ Lightbox Gallery
   .lightbox-main-img {
     width: 28rem;
     height: 28rem;
+  }
+  .lightbox-arrow-left,
+  .lightbox-arrow-right {
+    top: 38%;
   }
 }

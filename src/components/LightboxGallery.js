@@ -40,7 +40,10 @@ const LightboxGallery = () => {
             {/* the gallery part from GalleryBigScreen with added left/right arrow from Gallery */}
             <article className='gallery-big-screen-images-container lightbox-gallery-image-container'>
               {/* arrow */}
-              <div className='slider-arrow-left' onClick={prevImage}>
+              <div
+                className='slider-arrow-left lightbox-arrow-left'
+                onClick={prevImage}
+              >
                 <IoIosArrowBack />
               </div>
               <img
@@ -70,7 +73,10 @@ const LightboxGallery = () => {
                 })}
               </div>
               {/* arrow */}
-              <div className='slider-arrow-right' onClick={nextImage}>
+              <div
+                className='slider-arrow-right lightbox-arrow-right'
+                onClick={nextImage}
+              >
                 <IoIosArrowForward />
               </div>
             </article>
