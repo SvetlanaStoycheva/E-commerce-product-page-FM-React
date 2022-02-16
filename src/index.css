@@ -359,8 +359,18 @@ Gallery
     border-radius: 12px;
   }
   .active-small-img-container {
-    opacity: 50%;
+    position: relative;
     border: 3px solid var(--clr-primary-orange);
+  }
+  .active-small-img-container:after {
+    content: '';
+    z-index: 10;
+    display: block;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
   }
 }
 
