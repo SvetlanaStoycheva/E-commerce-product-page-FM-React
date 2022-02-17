@@ -373,6 +373,14 @@ Gallery
     background: rgba(0, 0, 0, 0.5);
   }
 }
+@media screen and (min-width: 1200px) {
+  .product-container {
+    padding: 0 6rem;
+  }
+  .gallery-big-screen-images-container {
+    max-width: 40rem;
+  }
+}
 
 /*
 =============== 
